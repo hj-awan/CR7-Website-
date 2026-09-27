@@ -1,0 +1,1253 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cristiano Ronaldo - The Journey of CR7">
+
+    <title>CR7 | Cristiano Ronaldo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: white;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title p {
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+
+        /* NAVBAR */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #222;
+        }
+
+        nav {
+            max-width: 1250px;
+            height: 75px;
+            margin: auto;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #d4af37;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ddd;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 100px;
+
+            background:
+                linear-gradient(90deg,
+                    rgba(0, 0, 0, .95),
+                    rgba(0, 0, 0, .65),
+                    rgba(0, 0, 0, .20)),
+
+                url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Cristiano%20Ronaldo%202275.jpg") center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .small-title {
+            color: #d4af37;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(60px, 10vw, 120px);
+            line-height: .9;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin-top: 25px;
+            color: #ddd;
+            font-size: 18px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 25px;
+            border: 1px solid #d4af37;
+            transition: .3s;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #d4af37;
+            color: #000;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* STATS */
+
+        .stats {
+            background: #101010;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            padding: 30px 20px;
+            text-align: center;
+
+            background: #151515;
+            border: 1px solid #292929;
+        }
+
+        .stat-card h3 {
+            font-size: 38px;
+            color: #d4af37;
+        }
+
+        .stat-card p {
+            color: #aaa;
+        }
+
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            height: 550px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .about-text h3 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #bbb;
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+
+        /* TIMELINE */
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+
+            width: 2px;
+            background: #d4af37;
+        }
+
+        .timeline-item {
+            width: 50%;
+            padding: 20px 40px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background: #151515;
+            padding: 25px;
+            border: 1px solid #292929;
+        }
+
+        .timeline-content h3 {
+            color: #d4af37;
+            font-size: 25px;
+        }
+
+        .timeline-content p {
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+
+        /* CLUBS */
+
+        .clubs {
+            background: #101010;
+        }
+
+        .club-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .club-card {
+            min-height: 230px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            padding: 22px;
+
+            background:
+                linear-gradient(transparent,
+                    rgba(0, 0, 0, .9));
+
+            background-color: #1b1b1b;
+
+            border: 1px solid #292929;
+
+            transition: .3s;
+        }
+
+        .club-card:hover {
+            transform: translateY(-8px);
+            border-color: #d4af37;
+        }
+
+        .club-card h3 {
+            color: #d4af37;
+        }
+
+        .club-card p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+
+        /* POSTER */
+
+        .poster {
+            min-height: 600px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(90deg,
+                    rgba(0, 0, 0, .95),
+                    rgba(0, 0, 0, .45)),
+
+                url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Cristiano%20Ronaldo%2C%202023.jpg") center/cover no-repeat;
+        }
+
+        .poster-content {
+            max-width: 600px;
+        }
+
+        .poster h2 {
+            font-size: 70px;
+            line-height: .95;
+        }
+
+        .poster h2 span {
+            color: #d4af37;
+        }
+
+
+        /* ACHIEVEMENTS */
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .achievement {
+            background: #151515;
+            padding: 30px;
+            border-left: 4px solid #d4af37;
+        }
+
+        .achievement h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .achievement p {
+            color: #aaa;
+        }
+
+
+        /* RECORDS */
+
+        .records {
+            background: #101010;
+        }
+
+        .record-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .record {
+            background: #151515;
+            padding: 20px;
+            border: 1px solid #292929;
+        }
+
+        .record strong {
+            color: #d4af37;
+        }
+
+
+        /* GALLERY */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            height: 330px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            height: 100%;
+            object-fit: cover;
+
+            transition: .5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* PRESENT */
+
+        .present {
+            background: #101010;
+        }
+
+        .present-box {
+            max-width: 900px;
+            margin: auto;
+
+            padding: 45px;
+
+            border: 1px solid #333;
+            background: #151515;
+        }
+
+        .present-box h3 {
+            color: #d4af37;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .present-box p {
+            color: #bbb;
+            margin-bottom: 15px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #050505;
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        footer .logo {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 14px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .club-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .record-list {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                width: 100%;
+                left: 0;
+                text-align: left;
+                padding-left: 40px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 65px 5%;
+            }
+
+            .hero h1 {
+                font-size: 60px;
+            }
+
+            .stats-grid,
+            .club-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .poster h2 {
+                font-size: 50px;
+            }
+
+            .about-image img {
+                height: 400px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <nav>
+
+            <a href="#home" class="logo">
+                CR<span>7</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="#about">About</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#clubs">Clubs</a></li>
+                <li><a href="#records">Records</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#present">Present</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="small-title">
+                    THE STORY OF CR7
+                </div>
+
+                <h1>
+                    Cristiano
+                    <span>Ronaldo</span>
+                </h1>
+
+                <p>
+                    From Madeira to the biggest stages in
+                    world football — discover the journey,
+                    career, records, trophies and legacy of CR7.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#career" class="btn btn-primary">
+                        Explore His Journey
+                    </a>
+
+                    <a href="#records" class="btn">
+                        View Records
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="stats">
+
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <h3>5</h3>
+                        <p>Ballon d'Or Awards</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>5</h3>
+                        <p>Champions League Titles</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>2016</h3>
+                        <p>European Champion</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>CR7</h3>
+                        <p>Football Icon</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EARLY LIFE -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>Early Life</h2>
+
+                    <p>
+                        The beginning of the CR7 story
+                    </p>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-image">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwmATxCisRIaYgu7181K8RKFr8vRR3FW6VagWSmA65Aw&s=10"
+                            alt="Cristiano Ronaldo">
+
+                    </div>
+
+
+                    <div class="about-text">
+
+                        <h3>
+                            From Madeira to the World
+                        </h3>
+
+                        <p>
+                            Cristiano Ronaldo dos Santos Aveiro
+                            was born on 5 February 1985 in
+                            Funchal, Madeira, Portugal.
+                        </p>
+
+                        <p>
+                            His football journey began in Madeira.
+                            He later joined Sporting CP before
+                            making his breakthrough at Manchester
+                            United.
+                        </p>
+
+                        <p>
+                            His development transformed him from
+                            a talented young winger into one of
+                            football's most prolific goalscorers.
+                        </p>
+
+                        <p>
+                            The name
+                            <span class="highlight">CR7</span>
+                            eventually became one of the most
+                            recognizable identities in football.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAREER -->
+
+        <section id="career">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>Career Journey</h2>
+
+                    <p>
+                        The major chapters of CR7's professional career
+                    </p>
+
+                </div>
+
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <h3>Sporting CP</h3>
+
+                            <p>
+                                Ronaldo developed through Sporting's
+                                academy before making his senior debut.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <h3>Manchester United</h3>
+
+                            <p>
+                                Ronaldo developed into a global star
+                                and won major domestic and European
+                                trophies.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <h3>Real Madrid</h3>
+
+                            <p>
+                                Between 2009 and 2018, Ronaldo scored
+                                451 competitive goals for Real Madrid.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <h3>Juventus</h3>
+
+                            <p>
+                                Ronaldo continued his goalscoring
+                                career in Italy after joining Juventus.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <h3>Manchester United Return</h3>
+
+                            <p>
+                                Ronaldo returned to Manchester United
+                                in 2021.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <h3>Al-Nassr</h3>
+
+                            <p>
+                                Ronaldo joined Al-Nassr in January 2023
+                                and continued his career in Saudi Arabia.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLUBS -->
+
+        <section class="clubs" id="clubs">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>The Clubs</h2>
+
+                    <p>
+                        The shirts that became chapters of his story
+                    </p>
+
+                </div>
+
+
+                <div class="club-grid">
+
+                    <div class="club-card">
+                        <h3>Sporting CP</h3>
+                        <p>Portugal</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwcqPi7mpB4DoB7sKl9ApPmk1GOjVnOZQiWfLbmpNGzn5QLOZ9dnOQYkQ&s=10" 
+                        alt="Sporting CP">
+                    </div>
+
+                    <div class="club-card">
+                        <h3>Manchester United</h3>
+                        <p>England</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlE3HJH7f4-H0RyL0F3AgLws177-0Ja8VyxfFfdnD7GQ861joVH1wU0N4&s=10"
+                        alt="Manchester United">
+                    </div>
+
+                    <div class="club-card">
+                        <h3>Real Madrid</h3>
+                        <p>Spain</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-EWEVZwJerafvMlF9NTF5DRxUTiH-Ia8UTFC4Zh0GPA&s=10" 
+                        alt="Real Madrid">
+                    </div>
+
+                    <div class="club-card">
+                        <h3>Juventus</h3>
+                        <p>Italy</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX0xAvG_cDVyTD1G8zIFsM7G03lI8C-kVJhvKLzrswhg&s=10" 
+                        alt="Juventus">
+                    </div>
+
+                    <div class="club-card">
+                        <h3>Al-Nassr</h3>
+                        <p>Saudi Arabia</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFjRvsuJklRrmqNp9gpJGLkfwJZfo1YzPMLJg62qaCiA&s=10" 
+                        alt="Al-Nassr">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- POSTER -->
+
+        <section class="poster">
+
+            <div class="container">
+
+                <div class="poster-content">
+
+                    <div class="small-title">
+                        THE MINDSET
+                    </div>
+
+                    <h2>
+                        WORK.
+                        <span>DISCIPLINE.</span>
+                        LEGACY.
+                    </h2>
+
+                    <p>
+                        A career built across generations,
+                        leagues and football eras.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACHIEVEMENTS -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>Major Achievements</h2>
+
+                    <p>
+                        Some defining achievements
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-grid">
+
+                    <div class="achievement">
+
+                        <h3>Ballon d'Or</h3>
+
+                        <p>
+                            Five Ballon d'Or awards.
+                        </p>
+
+                    </div>
+
+
+                    <div class="achievement">
+
+                        <h3>Champions League</h3>
+
+                        <p>
+                            Five UEFA Champions League titles.
+                        </p>
+
+                    </div>
+
+
+                    <div class="achievement">
+
+                        <h3>Euro 2016</h3>
+
+                        <p>
+                            Portugal won the European Championship
+                            in 2016.
+                        </p>
+
+                    </div>
+
+
+                    <div class="achievement">
+
+                        <h3>Goal Scoring</h3>
+
+                        <p>
+                            Ronaldo has broken numerous scoring
+                            records throughout his career.
+                        </p>
+
+                    </div>
+
+
+                    <div class="achievement">
+
+                        <h3>International Career</h3>
+
+                        <p>
+                            One of Portugal's most important
+                            international players.
+                        </p>
+
+                    </div>
+
+
+                    <div class="achievement">
+
+                        <h3>Longevity</h3>
+
+                        <p>
+                            His professional career has spanned
+                            more than two decades.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECORDS -->
+
+        <section class="records" id="records">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>Records & Numbers</h2>
+
+                    <p>
+                        Selected career records
+                    </p>
+
+                </div>
+
+
+                <div class="record-list">
+
+                    <div class="record">
+                        <strong>01.</strong>
+                        UEFA Champions League leading goalscorer.
+                    </div>
+
+                    <div class="record">
+                        <strong>02.</strong>
+                        UEFA Champions League appearance record holder.
+                    </div>
+
+                    <div class="record">
+                        <strong>03.</strong>
+                        Real Madrid's all-time leading goalscorer.
+                    </div>
+
+                    <div class="record">
+                        <strong>04.</strong>
+                        Five-time Ballon d'Or winner.
+                    </div>
+
+                    <div class="record">
+                        <strong>05.</strong>
+                        European Championship winner with Portugal.
+                    </div>
+
+                    <div class="record">
+                        <strong>06.</strong>
+                        Scored at six FIFA World Cup tournaments.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALLERY -->
+
+        <section id="gallery">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>CR7 Gallery</h2>
+
+                    <p>
+                        Different chapters of the journey
+                    </p>
+
+                </div>
+
+
+                <div class="gallery-grid">
+
+
+                    <div class="gallery-item">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeKqq2sHxG8xL990Ob-mNjzX4AIU9_vLMWGiUEj5wInQ&s=10"
+                            alt="Cristiano Ronaldo Portugal">
+
+                    </div>
+
+
+                    <div class="gallery-item">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqIEbzVi3ldxMY1K7d5w426HxEonUeRAaf3aHOhoFw3A&s=10"
+                            alt="Cristiano Ronaldo Real Madrid">
+
+                    </div>
+
+
+                    <div class="gallery-item">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4aqpGHj6-Wpin_zhafefl8zo5wYI9ZJMgQKuQkWVgCA&s=10"
+                            alt="Cristiano Ronaldo Al Nassr">
+
+                    </div>
+
+
+                    <div class="gallery-item">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTArqCODQGIEY4oebX1kfl7_ooRbh4ia0Zemyax0Nk9rw&s=10"
+                            alt="Cristiano Ronaldo Portugal">
+
+                    </div>
+
+
+                    <div class="gallery-item">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUqGglrUMsfELpLauT44hdoctnJJJb7IsnMj9888xr_A&s=10"
+                            alt="Cristiano Ronaldo Manchester United">
+
+                    </div>
+
+
+                    <div class="gallery-item">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_7ojk_tPjOLNoKbs5nMvPfszold2pLuAkNQIPIm6x0B66foPxL_908hE&s=10"
+                            alt="Cristiano Ronaldo Juventus">
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRESENT -->
+
+        <section class="present" id="present">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>The Present</h2>
+
+                    <p>
+                        The latest chapter of the CR7 story
+                    </p>
+
+                </div>
+
+
+                <div class="present-box">
+
+                    <h3>Al-Nassr & Portugal</h3>
+
+                    <p>
+                        Ronaldo continues to represent
+                        Al-Nassr and Portugal.
+                    </p>
+
+                    <p>
+                        His career has now crossed multiple
+                        generations of football and several
+                        major European leagues.
+                    </p>
+
+                    <p>
+                        His story continues with Al-Nassr
+                        and his international career with Portugal.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">
+            CR<span>7</span>
+        </div>
+
+        <p>
+            A fan-made educational website about
+            Cristiano Ronaldo's football journey.
+        </p>
+
+        <p>
+            © 2026 CR7 Fan Project
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
